@@ -24,7 +24,7 @@ function getBTC(){
     .then(res =>{
         const cryptos = res.data.EUR
         price.innerHTML = '€'+cryptos.toLocaleString('en')
-debugger
+
         if(targetPrice.innerHTML != '' && targetPriceVal <= res.data.EUR){
             const myNotification = new Notification(notification.title, notification)
             targetPriceVal = undefined
